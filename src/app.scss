@@ -1,0 +1,62 @@
+$lightBlue: rgba(0, 152, 254, 1);
+$darkBlue: rgba(1, 103, 252, 1);
+$lightGrey: rgba(67, 68, 68, 1);
+$darkGrey: rgba(50, 51, 51, 1);
+
+$largeShadow: 0 0 10px rgba(0, 0, 0, 0.2);
+$smallShadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+%container {
+  max-width: 1024px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background: $lightBlue;
+  background: linear-gradient(180deg, $lightBlue 0%, $darkBlue 100%);
+  margin: auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  &__inner {
+    height: 100%;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend %container;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: $largeShadow;
+  }
+  &__button {
+    margin-left: 15px;
+  }
+}
+
+.button {
+  background: rgb(67, 68, 68);
+  background: linear-gradient(180deg, $lightGrey 0%, $darkGrey 100%);
+  border: none;
+  padding: 10px;
+  color: #fff;
+  font-weight: 600;
+  &--link {
+    background: none;
+  }
+}
