@@ -1,6 +1,6 @@
 import Button from "./button.component";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <div className="header">
       <div className="header__inner">

@@ -9,6 +9,8 @@ $blueGradient: linear-gradient(180deg, $lightBlue 0%, $darkBlue 100%);
 $largeShadow: 0 0 10px rgba(0, 0, 0, 0.5);
 $smallShadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
+$smallScreen: 768px;
+
 %inner {
   max-width: 1024px;
   width: 100%;
@@ -31,6 +33,12 @@ body {
   margin: 0;
 }
 
+a {
+  font-style: unset;
+  color: unset;
+  text-decoration: unset;
+}
+
 .header {
   background: $lightBlue;
   background: $blueGradient;
@@ -41,7 +49,7 @@ body {
   @extend %container;
   &__inner {
     height: 100%;
-    padding: 20px 0px;
+    padding: 20px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,7 +73,7 @@ body {
   @extend %container;
   &__inner {
     @extend %inner;
-    padding: 15px 0;
+    padding: 15px 10px;
     font-size: 22px;
     font-weight: 500;
   }
@@ -81,5 +89,73 @@ body {
   cursor: pointer;
   &--link {
     background: none;
+  }
+}
+
+.content {
+  padding: 20px 0; 
+  @extend %container;
+  &__inner {
+    @extend %inner;
+  }
+}
+
+.footer {
+  padding: 50px 0;
+  background: $darkGradient;
+  color: #b2b2b7;
+  font-weight: 500;
+  @extend %container;
+  &__inner {
+    @extend %inner;
+  }
+  &__links {
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  &__copyright {
+    font-size: 12px;
+    margin-bottom: 60px;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @media (max-width: $smallScreen) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__socials {
+    @media (max-width: $smallScreen) {
+      margin-bottom: 20px;
+      text-align: center;
+      img {
+        margin-left: 20px;
+        margin-right: 20px !important;
+      }
+    }
+    img {
+      height: 40px;
+      margin-right: 40px;
+      cursor: pointer;
+    }
+  }
+  &__app-store {
+    @media (max-width: $smallScreen) {
+      text-align: center;
+      img {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    img {
+      height: 40px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
   }
 }
