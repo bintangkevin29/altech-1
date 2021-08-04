@@ -7,10 +7,12 @@ import Footer from "./components/styleguide/footer.component";
 const App = () => {
   return (
     <>
-      <Header />
-      <SubHeader onClick={() => console.log("test")}>Test</SubHeader>
-      <Content />
-      <Footer />
+      <div className="app">
+        <Header />
+        <SubHeader onClick={() => console.log("test")}>Test</SubHeader>
+        <Content />
+        <Footer />
+      </div>
     </>
   );
 };
